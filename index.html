@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Drawer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #canvasWrapper {
+            position: relative;
+        }
+        canvas {
+            border: 1px solid #000;
+        }
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Image and Draw Grid</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <div id="canvasWrapper">
+        <canvas id="imageCanvas"></canvas>
+    </div>
+    <label for="gridColor">Grid Color (RGB):</label>
+    <input type="text" id="gridColor" placeholder="255,0,0" />
+    <br />
+    <label for="lineWidth">Line Width:</label>
+    <input type="number" id="lineWidth" value="1" min="1" />
+    <br />
+    <label for="lineOpacity">Line Opacity:</label>
+    <input type="range" id="lineOpacity" value="100" min="0" max="100" />
+    <span id="opacityValue">100%</span>
+    <br />
+    <button id="generateGridBtn">Generate Grid</button>
+    <button id="downloadBtn">Download Image</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
